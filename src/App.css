@@ -1,42 +1,54 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Full-screen centered layout with a smooth gradient */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #121212);
+  color: #f5f5f5;
+  font-family: "Inter", sans-serif;
   text-align: center;
+  padding: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Headline with a glow */
+.container h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.25em;
+  text-shadow: 0 0 10px rgba(29, 185, 84, 0.5);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Subtitle with muted tone */
+.container p {
+  font-size: 1.1rem;
+  color: #bbbbbb;
+  margin-bottom: 2em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Play/Stop button with a 3D press effect */
+.play-button {
+  background: linear-gradient(145deg, #1db954, #17a74a);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 18px 52px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 -2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.1s ease, background 0.2s ease;
 }
 
-.card {
-  padding: 2em;
+/* Hover gives a brighter color */
+.play-button:hover {
+  background: linear-gradient(145deg, #1ed760, #19b24f);
+  transform: translateY(-2px);
 }
 
-.read-the-docs {
-  color: #888;
+/* Pressing the button pushes it down slightly */
+.play-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(0, 0, 0, 0.4);
 }
