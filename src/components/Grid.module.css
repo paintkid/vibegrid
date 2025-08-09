@@ -13,3 +13,8 @@
   border-radius: 4px;
   transition: background-color 0.1s ease;
 }
+
+.cellOn {
+  background-color: #1db954;
+  box-shadow: 0 0 10px #1db954;
+}
