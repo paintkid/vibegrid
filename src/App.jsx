@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import * as Tone from "tone";
 import "./App.css";
 import TransportControls from "./components/TransportControls";
+import Grid from "./components/Grid";
 
 export default function App() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -43,6 +44,7 @@ export default function App() {
         isPlaying={isPlaying}
         onPlayToggle={handlePlayToggle}
       />
+      <Grid />
     </div>
   );
 }

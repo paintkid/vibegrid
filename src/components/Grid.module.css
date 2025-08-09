@@ -1,0 +1,15 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 5px;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 32px;
+}
+
+.cell {
+  aspect-ratio: 1 / 1;
+  background-color: #333;
+  border-radius: 4px;
+  transition: background-color 0.1s ease;
+}
