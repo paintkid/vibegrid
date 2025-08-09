@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as Tone from "tone";
 import "./App.css";
+import TransportControls from "./components/TransportControls";
 
 export default function App() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -38,11 +39,10 @@ export default function App() {
 
   return (
     <div className="container">
-      <h1>VibeGrid</h1>
-      <p>A Web-Based Step Sequencer</p>
-      <button onClick={handlePlayToggle} className="play-button">
-        {isPlaying ? "STOP" : "PLAY"}
-      </button>{" "}
+      <TransportControls
+        isPlaying={isPlaying}
+        onPlayToggle={handlePlayToggle}
+      />
     </div>
   );
 }
